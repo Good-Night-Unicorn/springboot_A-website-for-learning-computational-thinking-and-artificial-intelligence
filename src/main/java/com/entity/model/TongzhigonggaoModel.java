@@ -1,0 +1,182 @@
+package com.entity.model;
+
+import com.entity.TongzhigonggaoEntity;
+
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.io.Serializable;
+ 
+
+/**
+ * 通知公告
+ * 接收传参的实体类  
+ *（实际开发中配合移动端接口开发手动去掉些没用的字段， 后端一般用entity就够用了） 
+ * 取自ModelAndView 的model名称
+ * @author 
+ * @email 
+ * @date 2025-02-16 15:52:23
+ */
+public class TongzhigonggaoModel  implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	 			
+	/**
+	 * 公告类型
+	 */
+	
+	private String gonggaoleixing;
+		
+	/**
+	 * 公告图片
+	 */
+	
+	private String gonggaotupian;
+		
+	/**
+	 * 班级
+	 */
+	
+	private String banji;
+		
+	/**
+	 * 公告内容
+	 */
+	
+	private String gonggaoneirong;
+		
+	/**
+	 * 公告时间
+	 */
+		
+	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat 
+	private Date gonggaoshijian;
+		
+	/**
+	 * 老师账号
+	 */
+	
+	private String laoshizhanghao;
+		
+	/**
+	 * 老师姓名
+	 */
+	
+	private String laoshixingming;
+				
+	
+	/**
+	 * 设置：公告类型
+	 */
+	 
+	public void setGonggaoleixing(String gonggaoleixing) {
+		this.gonggaoleixing = gonggaoleixing;
+	}
+	
+	/**
+	 * 获取：公告类型
+	 */
+	public String getGonggaoleixing() {
+		return gonggaoleixing;
+	}
+				
+	
+	/**
+	 * 设置：公告图片
+	 */
+	 
+	public void setGonggaotupian(String gonggaotupian) {
+		this.gonggaotupian = gonggaotupian;
+	}
+	
+	/**
+	 * 获取：公告图片
+	 */
+	public String getGonggaotupian() {
+		return gonggaotupian;
+	}
+				
+	
+	/**
+	 * 设置：班级
+	 */
+	 
+	public void setBanji(String banji) {
+		this.banji = banji;
+	}
+	
+	/**
+	 * 获取：班级
+	 */
+	public String getBanji() {
+		return banji;
+	}
+				
+	
+	/**
+	 * 设置：公告内容
+	 */
+	 
+	public void setGonggaoneirong(String gonggaoneirong) {
+		this.gonggaoneirong = gonggaoneirong;
+	}
+	
+	/**
+	 * 获取：公告内容
+	 */
+	public String getGonggaoneirong() {
+		return gonggaoneirong;
+	}
+				
+	
+	/**
+	 * 设置：公告时间
+	 */
+	 
+	public void setGonggaoshijian(Date gonggaoshijian) {
+		this.gonggaoshijian = gonggaoshijian;
+	}
+	
+	/**
+	 * 获取：公告时间
+	 */
+	public Date getGonggaoshijian() {
+		return gonggaoshijian;
+	}
+				
+	
+	/**
+	 * 设置：老师账号
+	 */
+	 
+	public void setLaoshizhanghao(String laoshizhanghao) {
+		this.laoshizhanghao = laoshizhanghao;
+	}
+	
+	/**
+	 * 获取：老师账号
+	 */
+	public String getLaoshizhanghao() {
+		return laoshizhanghao;
+	}
+				
+	
+	/**
+	 * 设置：老师姓名
+	 */
+	 
+	public void setLaoshixingming(String laoshixingming) {
+		this.laoshixingming = laoshixingming;
+	}
+	
+	/**
+	 * 获取：老师姓名
+	 */
+	public String getLaoshixingming() {
+		return laoshixingming;
+	}
+			
+}
